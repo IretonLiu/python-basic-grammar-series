@@ -11,8 +11,8 @@ def method1():
                 print( 'コメントを入力してください' )
                 comment = input()
                 post = f'ポイント: {point} コメント: {comment}'
-                file_pc = open("data.txt", 'a')
-                file_pc.write( f'{ post } \n' )
+                file_pc = open("data.txt", encoding="utf-8", mode="a")
+                file_pc.write(f'{post}\n')
                 file_pc.close()
                 break
         else:
@@ -20,7 +20,7 @@ def method1():
 
 def method2():
     print( 'これまでの結果' )
-    read_file = open("data.txt", "r")
+    read_file = open("data.txt", encoding="utf-8", mode="r")
     print( read_file.read() )
     read_file.close()
 
